@@ -1,25 +1,22 @@
-const pokemonName = document.querySelector('.pokemon-name');
-const pokemonNumber = document.querySelector('.pokemon-number');
-const pokemonImage = document.querySelector('.pokemon-image');
+const pokemonName = document.querySelector('.pokemon-name'),
+      pokemonNumber = document.querySelector('.pokemon-number'),
+      pokemonImage = document.querySelector('.pokemon-image');
 
-const Form = document.querySelector('.form');
-const Input = document.querySelector('.input-search');
-const PreviousButton = document.querySelector('.btn-prev');
-const NextButton = document.querySelector('.btn-next');
+const Form = document.querySelector('.form'),
+      Input = document.querySelector('.input-search'),
+      PreviousButton = document.querySelector('.btn-prev'),
+      NextButton = document.querySelector('.btn-next');
 
 let fetchPokemonID = 1;
 
-const fetchPokemon = async (pokemon) => {
+async function fetchPokemon(pokemon) {
   const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
 
-  if (APIResponse.status === 200) {
-    const data = await APIResponse.json();
-    return data;
-  }
+  if (APIResponse.status === 200)
+    return await APIResponse.json();
 }
 
 async function renderFetchedPokemon(pokemon) {
-
   pokemonName.innerHTML = 'Carregando...';
   pokemonNumber.innerHTML = '';
 
