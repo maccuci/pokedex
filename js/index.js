@@ -10,10 +10,10 @@ const Form = document.querySelector('.form'),
 let fetchPokemonID = 1;
 
 async function fetchPokemon(pokemon) {
-  const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+  const PokeAPIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
 
-  if (APIResponse.status === 200)
-    return await APIResponse.json();
+  if (PokeAPIResponse.status === 200)
+    return await PokeAPIResponse.json();
 }
 
 async function renderFetchedPokemon(pokemon) {
