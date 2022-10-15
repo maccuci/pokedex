@@ -1,0 +1,116 @@
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+
+:root {
+    --font-color: #EAE200;
+    --font-color-border: #0041a3;
+    --text-border: -2px -2px 0 var(--font-color-border), 2px -2px 0 var(--font-color-border), -2px 2px 0 var(--font-color-border), 2px 2px 0 var(--font-color-border);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pokemon Solid', cursive;
+}
+
+::selection {
+    background-color: var(--font-color);
+}
+
+body {
+  text-align: center;
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  min-height: 100vh;
+}
+
+main {
+  display: inline-block;
+  margin-top: 2%;
+  padding: 15px;
+  position: relative;
+}
+
+.welcome-title > h3 {
+    color: var(--font-color);
+    text-shadow: var(--text-border);
+    margin-right: 65%;
+    font-size: 30px;
+    letter-spacing: 0.15em;
+}
+
+.pokedex {
+  width: 100%;
+  max-width: 425px;
+}
+
+.pokemon-image {
+  position: absolute;
+  bottom: 55%;
+  left: 50%;
+  transform: translate(-61%, 20%);
+  height: 18%;
+}
+
+.pokemon-data {
+  position: absolute;
+  font-weight: 600;
+  color: var(--font-color);
+  text-shadow: var(--text-border);
+  top: 50%;
+  right: 32%;
+  font-size: clamp(8px, 5vw, 25px);
+}
+
+.pokemon-name {
+  color: var(--font-color);
+  text-transform: capitalize;
+  text-shadow: var(--text-border);
+  letter-spacing: .0.9rem;
+}
+
+.form {
+  position: absolute;
+  width: 65%;
+  top: 65%;
+  left: 13.5%;
+}
+
+.input-search {
+  width: 100%;
+  padding: 4%;
+  outline: none;
+  border: 2px solid #333;
+  border-radius: 6.5px;
+  font-weight: 600;
+  color: #3a444d;
+  font-size: 18px;
+  box-shadow: -3px 4px 0 #888, -5px 7px 0 #333;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  width: 65%;
+  transform: translate(-57%, 0);
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  width: 50%;
+  padding: 4%;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-size: clamp(8px, 5vw, 1rem);
+  font-weight: 600;
+  color: white;
+  background-color: #444;
+  box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+}
+
+.button:active {
+  box-shadow: inset -4px 4px 0 #222;
+  font-size: 0.9rem;
+}
